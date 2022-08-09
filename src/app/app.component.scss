@@ -1,0 +1,151 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #0c243b;
+  color: white;
+  font-weight: 600;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+}
+
+.tttrow {
+  display: flex;
+}
+
+.tttboard {
+  padding: 0;
+  height: 128px;
+  width: 128px;
+  display: inline-block;
+  margin: 6px;
+  border-radius: 17px;
+  line-height: 128px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  color: white;
+  font-size: 64px;
+  position: relative;
+  background: #6cb3b8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.tttboard:hover {
+  background: #2e3435;
+  color: white;
+}
+
+.ttto {
+  background: #f77851;
+  pointer-events: none;
+}
+
+.tttx {
+  background: #ffab4c;
+  pointer-events: none;
+}
+
+
+.resetbutton {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #404849;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.resetbutton:hover {
+  cursor: pointer;
+  background: #1d2122;
+  color: white;
+}
+
+.tttturn {
+  color: #2e3435;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tttwin {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2e3435;
+  font-size: 56px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .tttboard {
+    height: 80px;
+    width: 80px;
+    margin: 4px;
+    line-height: 80px;
+    font-size: 32px;
+  }
+
+  .tttwin {
+    font-size: 34px;
+  }
+  .resetbutton {
+    padding: 9px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+  }
+
+  .resetbutton:hover {
+    cursor: pointer;
+    background: #1d2122;
+    color: white;
+  }
+}
