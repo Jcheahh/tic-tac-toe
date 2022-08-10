@@ -22,6 +22,8 @@ interface Board {
 interface StateResponse {
   gameOver: boolean, 
   board: Board
+  player: any
+  winner: any
 }
 
 @Component({
@@ -56,13 +58,14 @@ export class AppComponent {
       .subscribe((data) => {
         this.board = data.board;
         this.over = data.gameOver;
-        this.player = this.playerX;
+        this.player = data.player;
+        this.winner = data.winner;
       })
   }
 
   addTicToe(id: any) {
 
-    const body = { playerId: this.player, position: id };
+    const body = { position: id };
 
     this.http.post<any>('https://quiet-taiga-58800.herokuapp.com/turn', body).subscribe(data => {
         this.board = data.state;
@@ -71,7 +74,7 @@ export class AppComponent {
           this.changePlayer();
         } 
         if (data.winner != null) {
-          this.winner = data.winner.id;
+          this.winner = data.winner;
         }
     })
   }
