@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration production --aot",
+    "start": "node --max_old_space_size=2560 node_modules/.bin/ng serve",
+    "build": "node --max_old_space_size=2560 node_modules/.bin/ng build --configuration production --aot",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
