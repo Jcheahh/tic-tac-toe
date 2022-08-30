@@ -20,7 +20,7 @@
     </div>
     <div *ngIf="over && winner != 'Draw' && winner != null;" class="tttwin">
       <div>
-        Player {{ player }} wins!
+        Player {{ winner }} wins!
       </div>
       <button (click)="resetBoard();" class="resetbutton" style="margin-top: 20px;">
         Play again
